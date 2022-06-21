@@ -1,0 +1,36 @@
+{
+  "name": "technical-test---internship-program--backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gonaas/Technical-Test---Internship-Program--Backend.git"
+  },
+  "author": "gonaas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gonaas/Technical-Test---Internship-Program--Backend/issues"
+  },
+  "homepage": "https://github.com/gonaas/Technical-Test---Internship-Program--Backend#readme",
+  "dependencies": {
+    "@joi/date": "^2.1.0",
+    "bcrypt": "^5.0.1",
+    "boom": "^7.3.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "express-session": "^1.17.3",
+    "express-validation": "^4.1.0",
+    "mongoose": "^6.4.0",
+    "mongoose-paginate-v2": "^1.6.3",
+    "morgan": "^1.10.0",
+    "passport": "^0.6.0",
+    "passport-jwt": "^4.0.0",
+    "ulid": "^2.3.0",
+    "winston-daily-rotate-file": "^4.7.1"
+  }
+}
