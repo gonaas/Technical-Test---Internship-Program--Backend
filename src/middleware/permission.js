@@ -1,6 +1,5 @@
 const Boom = require("boom");
 const { ROLES } = require("../constants/user");
-const { ROLES_EMPLOYER } = require("../constants/employer");
 const permissionsService = require("../features/api/permission/permission.service");
 
 /**
@@ -12,7 +11,7 @@ const permissionsService = require("../features/api/permission/permission.servic
 const hasPermission = (permission) => async (req, res, next) => {
   const { role } = req.user;
   let arrayPermission;
-  if (role !== ROLES_EMPLOYER.ADMIN) {
+  if (role !== ROLES.ADMIN) {
     arrayPermission = await permissionsService.getPermissionFilter({
       roles: role,
     });

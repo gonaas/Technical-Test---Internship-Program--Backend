@@ -24,7 +24,7 @@ router.get(
 // Get user by uuid
 router.get(
   "/:uuid",
-  hasPermission.hasPermission(PERMISSIONS.USER_GET_PROFILE),
+  hasPermission.hasPermission(PERMISSIONS.USER_LIST),
   userMiddleware.loadUser,
   userController.getUser
 );

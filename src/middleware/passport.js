@@ -3,7 +3,6 @@ const { ExtractJwt } = require("passport-jwt");
 const Boom = require("boom");
 
 const userService = require("../features/api/user/user.service");
-const employerService = require("../features/api/employer/employer.service");
 
 const config = require("../config");
 
@@ -45,28 +44,6 @@ module.exports = (passport) => {
           return done(
             Boom.forbidden("User does not exist", {
               code: "USER.LOGIN.USER_NOT_EXIST",
-            })
-          );
-        }
-      }
-
-      if (jwtPayload.type === "employer") {
-        try {
-          const employer = await employerService.getEmployerFilter({
-            uuid: jwtPayload.uuid,
-          });
-          if (employer.deleted) {
-            return done(
-              Boom.forbidden("Employer has been deleted", {
-                code: "EMPLOYER.LOGIN.USER_DELETED",
-              })
-            );
-          }
-          return done(null, employer);
-        } catch (e) {
-          return done(
-            Boom.forbidden("Employer does not exist", {
-              code: "EMPLOYER.LOGIN.USER_NOT_EXIST",
             })
           );
         }
