@@ -1,6 +1,7 @@
 const Permissions = require(`../../../models/permissions`);
 
 const toPublic = (permissions) => Permissions.toJSON(permissions);
+
 /**
  * Get a Permissions by filter.
  *

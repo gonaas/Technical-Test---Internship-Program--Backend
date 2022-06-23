@@ -19,7 +19,7 @@ var userSchema = new mongoose.Schema(
     telephone: { type: String, required: true },
     role: {
       type: String,
-      enum: [ROLES.CLIENT, ROLES.ADMINISTRATIVE],
+      enum: [ROLES.USER, ROLES.ADMINISTRATIVE],
       required: true,
     },
     password: { type: String, required: true },

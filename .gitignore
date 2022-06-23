@@ -18,7 +18,7 @@ tmp
 
 #Build
 public/css/main.css
-.nyc_output/*
+.nyc_output/*`
 
 #Libraries from npm packages
 public/js/lib/bootstrap.min*
